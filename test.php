@@ -7,7 +7,7 @@ $merc=new mercury206_lib("192.168.XXX.XX","PORT","NUMBER");
 echo "Serial number: ".$merc->get_serial()."\n";
 echo "Battery level: ".$merc->get_battery()."\n";
 $uip=$merc->get_uip();
-echo "U: ".$uip['U']." I: ".$uip['I']." P: ".$uip['P']."\n";
+echo "U: ".$uip['U']." I: ".$uip['I']."A/ч"."(".$uip['mA']."mA/ч)"." P: ".$uip['P']."кВт/ч"."(".$uip['W']."Вт/ч)"."\n";
 $values=$merc->get_values();
 echo "Power values: all: ".$values[0]." tarif1: ".$values[1]." tarif2: ".$values[2]." tarif3: ".$values[3]." tarif4: ".$values[4]."\n";
 
